@@ -1,0 +1,15 @@
+PODS:
+  - SVHTTPRequest (0.5)
+  - SVProgressHUD (2.1.2)
+
+DEPENDENCIES:
+  - SVHTTPRequest (~> 0.5)
+  - SVProgressHUD (~> 2.1)
+
+SPEC CHECKSUMS:
+  SVHTTPRequest: e358f1e5817d8d28a749c3433e62c6acfed48d51
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+
+PODFILE CHECKSUM: 45dbde5f24829330f989d5521be976d87ec67add
+
+COCOAPODS: 1.2.0
