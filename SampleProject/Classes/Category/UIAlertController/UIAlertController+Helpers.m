@@ -14,7 +14,8 @@
     dispatch_once(&onceToken, ^{
         Method method  = class_getInstanceMethod(self, @selector(viewWillAppear:));
         Method swizzle = class_getInstanceMethod(self, @selector(swizzledViewWillAppear:));
-        method_exchangeImplementations(method, swizzle);});
+        method_exchangeImplementations(method, swizzle);
+    });
 }
 
 - (void)swizzledViewWillAppear:(BOOL)animated {

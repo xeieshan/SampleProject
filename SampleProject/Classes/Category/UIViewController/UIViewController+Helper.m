@@ -374,7 +374,6 @@ static void * const kMessageAssociatedStorageKey = (void*)&kMessageAssociatedSto
                 actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Live Photo", @"Pick Photo From Library", nil];
                 [actionSheet setTag:1];
             }
-            
         }
             break;
             

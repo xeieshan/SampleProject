@@ -32,6 +32,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -48,7 +49,9 @@
 {
     [super viewDidDisappear:animated];
 }
+- (void) viewDidLayoutSubviews {
 
+}
 - (void)setUpView
 {
     keyBoard = [[SPKeyboardControls alloc] initWithFields:@[tf1,tf2,tf3]];

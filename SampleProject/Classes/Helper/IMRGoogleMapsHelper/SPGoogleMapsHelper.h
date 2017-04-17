@@ -14,7 +14,6 @@
 // https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&name=cruise&key=AIzaSyA8Al6-s6ZVX4F_-9gEh06AU6YEIdnmdlY
 
 typedef NS_ENUM(NSUInteger, SPGoogleGeoCoderResponse) {
-    
     SPGoogleGeoCoderResponseErrorOverQueryLimit, // indicates that you are over your quota.
     SPGoogleGeoCoderResponseErrorRequestDenied,  // indicates that your request was denied, generally because of lack of a sensor parameter.
     SPGoogleGeoCoderResponseErrorInvalidRequest, // generally indicates that the query (address or latlng) is missing.
@@ -39,11 +38,11 @@ typedef void (^ SPGoogleAutoCompletionBlock) (MOGoogleAutoCompleteList *googleAu
 /**
  *  Google API key. Not required, but result filtering on reverse geocoding is only available when set.
  */
-@property (nonatomic, strong)NSString *APIKey;
+@property (nonatomic, strong) NSString *APIKey;
 /**
  *  Operation Queue for requesting a call. Currently not being used.
  */
-@property (nonatomic, strong)NSOperationQueue *requestQueue;
+@property (nonatomic, strong) NSOperationQueue *requestQueue;
 
 /**
  *  sharedGoogleMapHelper
@@ -59,7 +58,7 @@ typedef void (^ SPGoogleAutoCompletionBlock) (MOGoogleAutoCompleteList *googleAu
  *@see https://developers.google.com/maps/documentation/geocoding/#ComponentFiltering for possible filter values.
  *@param completionHandler Upon completion or failure this will be invoked. Passes an array of IRTSGooglePlacemark objects (or empty if no results). If an error occured, the "error" object will be != nil
  **/
-
+//https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBIZaLWmbSWXn7LDU-Na54rxGYtn61uiW0
 - (void)geocodeAddressString:(NSString *)query components:(NSDictionary *)components completionHandler:(SPGoogleGeoCoderCompletionBlock)completion;
 
 /**
@@ -91,6 +90,8 @@ typedef void (^ SPGoogleAutoCompletionBlock) (MOGoogleAutoCompleteList *googleAu
  *  @param drawPoints            <#drawPoints description#>
  *  @param placeMarks            <#placeMarks description#>
  */
+
+//https://maps.googleapis.com/maps/api/directions/json?origin=75+9th+Ave+New+York,+NY&destination=MetLife+Stadium+1+MetLife+Stadium+Dr+East+Rutherford,+NJ+07073&key=AIzaSyC8qVrP393qjTl4SO0bYi49uB_tfJ_htjo
 - (void)getDirections:(CLLocationCoordinate2D)coordinateSource andCoordinateDestination:(CLLocationCoordinate2D)coordinateDestination  andDrawPoints:(SPGoogleDirectionsVoidBlock)drawPoints andPlaceMarks:(SPGoogleDirectionsPlaceMarksBlock)placeMarks;
 
 /**
@@ -99,6 +100,7 @@ typedef void (^ SPGoogleAutoCompletionBlock) (MOGoogleAutoCompleteList *googleAu
  *  @param keyWord      <#keyWord description#>
  *  @param autocomplete <#autocomplete description#>
  */
+// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Amoeba&types=establishment&location=37.76999,-122.44696&radius=500&key=AIzaSyDxbUjg12elRDjWOifMfxHyHA77pVIeMh4
 - (void)getAutoCompleteFromGoogle:(NSString *)keyWord andAutoComplete:(SPGoogleAutoCompletionBlock)autocomplete;
 
 

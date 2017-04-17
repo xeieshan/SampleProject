@@ -6,9 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-
+//https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Amoeba&types=establishment&location=37.76999,-122.44696&radius=500&key=AIzaSyDxbUjg12elRDjWOifMfxHyHA77pVIeMh4
 @interface MOGoogleAutoCompleteList : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *status;
