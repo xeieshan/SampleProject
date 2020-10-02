@@ -301,7 +301,7 @@ println("Hi there!")
 A GOOGLE MAPS Helper that help you do multiple tasks like
 
 #### HOW TO USE
->    //    using AFNetworking
+>    //  using AFNetworking
     
     [[AFGoogleMapsHelper sharedAFGoogleMapsHelper] geocodeAddressString:@"Arsenal Emirates" components:@{} completionHandler:^(MOGoogleGeocodeList *googleGeoCodeList, SPGoogleGeoCoderResponse responseCode, NSString *message) {
         
